@@ -1,0 +1,582 @@
+<!DOCTYPE html>
+<html lang="he" dir="rtl">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<!-- preview stage: hidden from search engines until launch -->
+<meta name="robots" content="noindex, nofollow">
+<title>CORE | תכנון ועיצוב ממוקד לשלב שינויי הדיירים | שאטסקי אילון</title>
+<meta name="description" content="CORE מרכז את התכנון והבחירות החשובות לשלב שינויי הדיירים בדירת קבלן: תכנון הדירה, תכנון מטבח וליווי בבחירת חומרי גמר, בלי ליווי עיצוב פנים מלא.">
+<meta property="og:type" content="website">
+<meta property="og:title" content="CORE | אל תגלו אחרי קבלת המפתח מה הייתם צריכים לתכנן אחרת">
+<meta property="og:description" content="מסלול תכנון ועיצוב ממוקד לרוכשי דירות קבלן בשלב שינויי הדיירים. מבית סטודיו שאטסקי אילון.">
+<meta property="og:locale" content="he_IL">
+<meta property="og:site_name" content="סטודיו שאטסקי אילון">
+<meta property="og:url" content="https://core-shatsky-eylon.netlify.app/">
+<meta property="og:image" content="https://core-shatsky-eylon.netlify.app/assets/og-image.jpg">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:image:alt" content="CORE by Shatsky Eylon: מטבח בהיר בדירה שתכנן הסטודיו">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Assistant:wght@800&family=Heebo:wght@300;400;500;600;700&family=Jost:wght@400;500&display=swap" rel="stylesheet">
+<style>
+/*
+  CORE, clean version: quiet and airy, in the studio's own language.
+  Warm white ground, hairline dividers, generous space. Studio-wide: SE mark over the hero, pill buttons,
+  Jost labels, footer. CORE-only: the CORE logo, dimension-line labels and a single terracotta pencil accent.
+*/
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+:root{
+  --white:#FBFAF8; --card:#FFFFFF; --mist:#F3F0EB; --line:#E5E0D9; --line-2:#D3CCC2;
+  --ink:#161514; --ink-2:#2E2C29; --muted:#6F6A63; --pencil:#B5735A; --pencil-deep:#93573F;
+  --logo:'Assistant','Heebo',sans-serif;
+  --body:'Heebo',system-ui,sans-serif;
+  --label:'Jost','Heebo',sans-serif;
+  --wrap:1160px;
+  --fs-text:18px; --fs-small:16px; --lh:1.75; --lh-head:1.25;
+  --s-para:16px; --s-head:20px; --s-block:56px; --s-section:128px;
+}
+html{scroll-behavior:smooth}
+body{font-family:var(--body);font-weight:400;color:var(--ink);background:var(--white);line-height:var(--lh);font-size:var(--fs-text);-webkit-font-smoothing:antialiased;overflow-x:hidden}
+img{display:block;max-width:100%}
+a{color:inherit;text-decoration:none}
+.wrap{max-width:var(--wrap);margin:0 auto;padding:0 32px}
+.narrow{max-width:720px;margin:0 auto;padding:0 32px}
+.center{text-align:center}
+section{padding:var(--s-section) 0}
+.mist{background:var(--mist)}
+
+h1,h2,h3{font-family:var(--body);font-weight:600;line-height:var(--lh-head);text-wrap:balance}
+h2{font-size:clamp(30px,3.9vw,48px);letter-spacing:-.5px;margin-bottom:var(--s-head)}
+h3{font-size:21px;letter-spacing:-.2px;margin-bottom:8px}
+.eyebrow{display:block;font-family:var(--label);font-size:11px;letter-spacing:.32em;text-transform:uppercase;color:var(--pencil-deep);margin-bottom:20px}
+/* key messages in the CORE pencil */
+.accent{color:var(--pencil-deep)}
+.final .accent{color:var(--pencil)}
+.head{text-align:center;max-width:720px;margin:0 auto var(--s-block)}
+.head h2{margin-bottom:0}
+.head .lead{margin-top:var(--s-head)}
+.lead{font-size:var(--fs-text);font-weight:300;color:var(--muted)}
+.prose > * + *{margin-top:var(--s-para)}
+.prose{font-weight:300}
+.prose strong{font-weight:600;color:var(--ink)}
+.soft{color:var(--muted)}
+
+.rv{opacity:0;transform:translateY(14px);transition:opacity .9s ease,transform .9s ease}
+.rv.in{opacity:1;transform:none}
+@media (prefers-reduced-motion:reduce){.rv{opacity:1;transform:none;transition:none}}
+
+/* buttons: square corners, black */
+.btn{display:inline-flex;justify-content:center;align-items:center;gap:10px;font-family:var(--body);font-size:15px;font-weight:500;letter-spacing:.15px;padding:16px 30px;border-radius:999px;border:1px solid var(--ink);background:var(--ink);color:var(--white);cursor:pointer;transition:background .25s,color .25s}
+.btn:hover{background:var(--pencil-deep);border-color:var(--pencil-deep);color:#fff}
+.btn.inv{background:var(--pencil);color:var(--ink);border-color:var(--pencil)}
+.btn.inv:hover{background:#c58a71;border-color:#c58a71;color:var(--ink)}
+.btn svg{width:18px;height:18px;flex:none}
+.btn:focus-visible,summary:focus-visible{outline:2px solid var(--pencil);outline-offset:3px}
+
+/* studio header over the photo */
+.top{position:absolute;top:0;inset-inline:0;z-index:5;padding:26px 0}
+.top .wrap{display:flex;align-items:center;gap:14px}
+.top img{height:38px;width:auto}
+.top .name{display:inline-flex;flex-direction:column;font-family:var(--label);font-size:12px;color:#fff;direction:ltr;line-height:1.4}
+/* both lines start and end at the same point: the name drops its trailing letter-spacing, the second line spreads its letters to match */
+.top .name b{font-weight:400;letter-spacing:.42em;margin-right:-.42em}
+.top .name small{display:flex;justify-content:space-between;font-size:10px;color:rgba(255,255,255,.7);margin-top:1px}
+.top .name i{font-style:normal}
+
+/* hero: photo, centered CORE logo, the opening question */
+.hero{position:relative;min-height:100vh;min-height:100svh;display:flex;align-items:center;justify-content:center;color:var(--white);background:#000;text-align:center;overflow:hidden;padding:110px 0 90px}
+.hero .bg{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:55% 60%}
+.hero .shade{position:absolute;inset:0;background:radial-gradient(ellipse at 50% 48%,rgba(22,21,20,.42),rgba(22,21,20,.22) 65%),linear-gradient(to top,rgba(22,21,20,.38),rgba(22,21,20,0) 35%)}
+.hero .core-logo,.hero .q{text-shadow:0 1px 18px rgba(0,0,0,.28)}
+.hero .wrap{position:static}
+.hero .core-logo{position:relative}
+.core-logo{display:inline-flex;flex-direction:column;align-items:center;direction:ltr;line-height:1}
+.core-logo .w{font-family:var(--logo);font-weight:800;font-size:clamp(80px,10vw,140px);line-height:.9}
+.core-logo .by{font-family:var(--label);font-size:clamp(15px,1.5vw,20px);letter-spacing:.1em;margin-top:clamp(12px,1.3vw,18px)}
+.core-logo .se{align-self:stretch;display:flex;justify-content:space-between;font-family:var(--label);font-size:clamp(11px,1.2vw,16px);margin-top:clamp(10px,1.1vw,15px)}
+.hero .q{position:absolute;left:16px;right:16px;bottom:clamp(78px,8.5vh,96px);font-size:clamp(17px,1.7vw,21px);font-weight:300;color:rgba(255,255,255,.9)}
+.hero .q span{display:block}
+/* the opening question: two bold lines at one size, readable on the photo */
+.hero .q span{font-size:clamp(19px,2.2vw,28px);font-weight:500;color:#fff;line-height:1.4;text-shadow:0 1px 3px rgba(0,0,0,.45),0 2px 22px rgba(0,0,0,.4)}
+.hero .q span + span{margin-top:4px}
+.hero .q span{text-wrap:balance}
+.cue{position:absolute;bottom:28px;left:50%;transform:translateX(-50%);width:24px;height:38px;border:1.5px solid rgba(255,255,255,.6);border-radius:13px}
+.cue::after{content:"";position:absolute;top:7px;left:50%;width:3px;height:7px;margin-left:-1.5px;border-radius:2px;background:#fff;animation:cue 1.8s ease-in-out infinite}
+@keyframes cue{0%{opacity:0;transform:translateY(0)}40%{opacity:1}100%{opacity:0;transform:translateY(11px)}}
+@media (prefers-reduced-motion:reduce){.cue::after{animation:none}}
+
+/* intro */
+.intro{text-align:center;max-width:820px;margin:0 auto}
+.intro h1{font-size:clamp(32px,4.2vw,52px);letter-spacing:-.6px}
+.intro .prose{max-width:640px;margin:var(--s-head) auto 0;color:var(--muted)}
+.intro .btn{margin-top:36px}
+/* pain */
+
+/* timing */
+.timing{display:grid;grid-template-columns:1fr 1fr;gap:80px;align-items:center}
+.timing img{width:100%;aspect-ratio:4/5;object-fit:cover;border-radius:14px}
+
+/* bridge */
+.quote{margin-top:var(--s-block)!important;padding:6px 24px;border-inline-start:2px solid var(--pencil);font-size:clamp(19px,1.9vw,22px);font-weight:500;color:var(--ink)}
+.trio{display:flex;justify-content:center;flex-wrap:wrap;gap:10px 40px;margin-top:var(--s-block);padding-top:32px;border-top:1px solid var(--line)}
+.trio div{font-size:var(--fs-text);color:var(--muted);font-weight:300}
+.trio b{font-weight:700;color:var(--pencil-deep)}
+.trio .yes{color:var(--ink);font-weight:500}
+
+/* pillars: three columns split by hairlines */
+.pillars{display:grid;grid-template-columns:repeat(3,1fr);border-top:1px solid var(--line)}
+.pillar{padding:40px 32px 0;display:flex;flex-direction:column}
+.pillar + .pillar{border-inline-start:1px solid var(--line)}
+.pillar .num{font-family:var(--label);font-size:12px;letter-spacing:.25em;color:var(--pencil-deep);direction:ltr;text-align:right}
+.pillar img{width:100%;aspect-ratio:4/3;object-fit:cover;border-radius:12px;margin:18px 0 26px}
+.pillar .prose{font-size:var(--fs-small);color:var(--muted)}
+.pillar .why{margin-top:auto;padding-top:22px;font-weight:500;font-size:var(--fs-small);color:var(--ink)}
+.pillar .prose{margin-bottom:24px}
+
+/* deliverables */
+.deliv{display:grid;grid-template-columns:1fr 1fr;gap:0 56px;list-style:none;border-top:1px solid var(--line)}
+.deliv li{display:flex;gap:14px;align-items:flex-start;padding:18px 0;border-bottom:1px solid var(--line);font-size:var(--fs-small);font-weight:300}
+.deliv li::before{content:"";flex:none;width:18px;height:18px;margin-top:4px;background:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='%230C0C0C' stroke-width='1.8' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpath d='M4 12.5l5 5L20 6.5'/%3E%3C/svg%3E") center/18px no-repeat}
+.note{margin-top:var(--s-block);background:var(--card);border:1px solid var(--line);border-radius:14px;padding:24px 28px;font-size:var(--fs-small);font-weight:300;color:var(--ink-2)}
+.note b{font-weight:600}
+
+/* process: a short horizontal path of five numbered stops */
+.steps{list-style:none;display:grid;grid-template-columns:repeat(5,1fr);gap:20px;position:relative}
+.steps::before{content:"";position:absolute;top:26px;inset-inline:10%;border-top:1px dashed var(--line-2)}
+.step{text-align:center;position:relative}
+.step .n{width:52px;height:52px;margin:0 auto 18px;border-radius:50%;border:1px solid var(--pencil);background:var(--white);display:flex;align-items:center;justify-content:center;font-family:var(--label);font-size:15px;color:var(--pencil-deep);position:relative}
+.step + .step .n::after{content:"←";position:absolute;inset-inline-end:calc(100% + 6px);top:50%;transform:translateY(-55%);font-size:14px;color:var(--pencil);background:var(--white);padding:0 4px}
+.step h3{font-size:19px;margin-bottom:6px}
+.step p{font-size:var(--fs-small);font-weight:300;color:var(--muted);max-width:200px;margin:0 auto}
+.end-line{text-align:center;font-size:clamp(19px,1.9vw,22px);font-weight:500;max-width:640px;margin:var(--s-block) auto 0}
+
+/* who: a 2x2 grid of cells */
+.who{display:grid;grid-template-columns:1fr 1fr;border:1px solid var(--line);background:var(--card);border-radius:16px;overflow:hidden}
+.who div{padding:34px 32px}
+.who div:nth-child(even){border-inline-start:1px solid var(--line)}
+.who div:nth-child(n+3){border-top:1px solid var(--line)}
+.who p{font-size:var(--fs-small);font-weight:300;color:var(--muted)}
+.other{margin-top:24px;display:grid;grid-template-columns:1fr auto;gap:40px;align-items:center;padding:32px;border:1px solid var(--line);background:var(--card);border-radius:16px}
+.other p{font-size:var(--fs-small);font-weight:300;color:var(--muted)}
+
+/* price */
+.price{max-width:560px;margin:0 auto;border:1px solid var(--line);padding:48px 44px 40px;text-align:center;background:var(--card);border-radius:20px}
+.price .ttl{font-size:15px;color:var(--muted)}
+.price .ttl b{font-family:var(--logo);font-weight:800;color:var(--ink);letter-spacing:.02em}
+.price .amt{font-size:clamp(52px,5.6vw,68px);font-weight:600;letter-spacing:-1.5px;line-height:1;margin:16px 0 14px}
+.price .amt small{font-size:.36em;font-weight:400;color:var(--muted);letter-spacing:0;margin-inline-start:6px}
+.price .inc{font-size:var(--fs-small);font-weight:300;color:var(--muted);max-width:400px;margin:0 auto 28px}
+.bonus{border-top:1px solid var(--line);border-bottom:1px solid var(--line);padding:18px 0;margin-bottom:28px}
+.bonus b{display:block;font-weight:600;font-size:var(--fs-small)}
+.bonus span{font-size:var(--fs-small);font-weight:300;color:var(--muted)}
+.price .btn{width:100%}
+.price .add{font-size:14px;color:var(--muted);margin-top:14px}
+
+/* testimonials */
+.shots{display:grid;grid-template-columns:repeat(3,1fr);gap:24px;align-items:start}
+.shot{border:1px solid var(--line);padding:10px;background:var(--card);border-radius:16px}
+.shot img{border-radius:8px}
+.shot:nth-child(3n+2){margin-top:40px}
+.shot img{width:100%}
+.swipe{display:none}
+
+/* about */
+.about{display:grid;grid-template-columns:.85fr 1.15fr;gap:88px;align-items:center}
+.about img{width:100%;aspect-ratio:4/5;object-fit:cover;object-position:57% 50%;border-radius:16px}
+
+/* faq */
+.faq{border-top:1px solid var(--line)}
+.faq details{border-bottom:1px solid var(--line)}
+.faq summary{cursor:pointer;list-style:none;padding:22px 0;font-size:var(--fs-text);font-weight:500;line-height:var(--lh-head);display:flex;justify-content:space-between;gap:20px;align-items:center}
+.faq summary::-webkit-details-marker{display:none}
+.faq summary::after{content:"";flex:none;width:12px;height:12px;background:linear-gradient(var(--ink),var(--ink)) center/12px 1.5px no-repeat,linear-gradient(var(--ink),var(--ink)) center/1.5px 12px no-repeat;transition:transform .25s}
+.faq details[open] summary::after{transform:rotate(45deg)}
+.faq details p{padding:0 0 22px;color:var(--muted);font-weight:300;font-size:var(--fs-small);max-width:620px}
+
+/* final: black band */
+.final{position:relative;background:#000;color:#fff;text-align:center;overflow:hidden}
+.final .bg{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;opacity:.32}
+.final .narrow{position:relative}
+.final .eyebrow{color:var(--pencil)}
+.final .prose{color:rgba(255,255,255,.78)}
+.final .prose strong{color:var(--white);font-weight:500}
+.final .btn{margin-top:40px}
+.final .note-s{display:block;margin-top:14px;font-size:13.5px;color:#8d8c88}
+
+footer{background:var(--ink);color:#8d8c88;font-size:13.5px;padding:0 0 44px;text-align:center}
+footer .wrap{border-top:1px solid #262625;padding-top:44px}
+footer img{height:46px;width:auto;margin:0 auto 14px;opacity:.85}
+footer .tag{color:#cfcdc8;font-size:15px;margin-bottom:4px}
+.social{display:flex;justify-content:center;gap:12px;margin-top:22px}
+.social a{width:42px;height:42px;border:1px solid #3a3a38;color:#d6d4cf;display:flex;align-items:center;justify-content:center;border-radius:50%;transition:background .25s,color .25s}
+.social a:hover{background:var(--white);color:var(--ink)}
+.social svg{width:18px;height:18px}
+
+.sticky{display:none}
+
+@media (max-width:900px){
+  :root{--s-para:14px;--s-head:16px;--s-block:40px;--s-section:80px}
+  :root{--fs-text:17px;--fs-small:15.5px}
+  .wrap,.narrow{padding:0 20px}
+  h2{font-size:clamp(27px,7.4vw,34px)}
+  .top{padding:18px 0}
+  .top img{height:30px}
+  .top .name{font-size:10.5px}
+  .top .name b{letter-spacing:.32em;margin-right:-.32em}
+  .top .name small{font-size:8.5px}
+  /* phone: the same path, top to bottom */
+  .steps{grid-template-columns:1fr;gap:0;max-width:420px;margin:0 auto}
+  .steps::before{top:22px;bottom:22px;inset-inline:auto;inset-inline-start:21.5px;border-top:0;border-inline-start:1px dashed var(--line-2)}
+  .step{display:grid;grid-template-columns:44px 1fr;gap:0 16px;text-align:start;padding-bottom:22px}
+  .step:last-child{padding-bottom:0}
+  .step .n{grid-row:span 2;width:44px;height:44px;margin:0;font-size:14px}
+  .step + .step .n::after{display:none}
+  .step h3{margin:8px 0 2px}
+  .step p{margin:0;max-width:none}
+  .intro h1{font-size:clamp(29px,8vw,38px)}
+  .intro .btn,.final .btn{width:100%}
+  .timing,.about{grid-template-columns:1fr;gap:36px}
+  .timing img{aspect-ratio:16/10}
+  .trio{flex-direction:column;align-items:center;gap:8px;text-align:center}
+  .pillars{grid-template-columns:1fr;border-top:0}
+  .pillar,.pillar + .pillar{padding:32px 0 36px;border-inline-start:0;border-top:1px solid var(--line)}
+  .deliv{grid-template-columns:1fr}
+  .who{grid-template-columns:1fr}
+  .who div{padding:26px 22px}
+  .who div:nth-child(even){border-inline-start:0}
+  .who div + div{border-top:1px solid var(--line)}
+  .other{grid-template-columns:1fr;gap:20px;padding:26px 22px}
+  .other .btn{width:100%}
+  .price{padding:36px 22px 30px}
+  /* testimonials become a swipeable row so each message stays readable */
+  .shots{display:flex;gap:12px;overflow-x:auto;scroll-snap-type:x mandatory;margin-inline:-20px;padding:0 20px 16px;scrollbar-width:none}
+  .shots::-webkit-scrollbar{display:none}
+  .shot{flex:0 0 84%;scroll-snap-align:center;align-self:center}
+  .shot:nth-child(3n+2){margin-top:0}
+  .swipe{display:block;text-align:center;font-size:13.5px;color:var(--muted);margin-top:6px}
+  footer{padding-bottom:104px}
+  .sticky{display:block;position:fixed;bottom:0;inset-inline:0;z-index:20;padding:12px 20px calc(12px + env(safe-area-inset-bottom));background:rgba(255,255,255,.96);backdrop-filter:blur(8px);border-top:1px solid var(--line);transform:translateY(110%);transition:transform .35s}
+  .sticky.show{transform:none}
+  .sticky .btn{width:100%}
+}
+</style>
+<!-- Meta Pixel (same pixel as the original CORE page on Rav Messer) -->
+<script>
+!function(f,b,e,v,n,t,s){if(f.fbq)return;n=f.fbq=function(){n.callMethod?n.callMethod.apply(n,arguments):n.queue.push(arguments)};if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version="2.0";n.queue=[];t=b.createElement(e);t.async=!0;t.src=v;s=b.getElementsByTagName(e)[0];s.parentNode.insertBefore(t,s)}(window,document,"script","https://connect.facebook.net/en_US/fbevents.js");
+fbq("init","526072887220486");
+fbq("track","PageView");
+</script>
+<noscript><img height="1" width="1" style="display:none" alt="" src="https://www.facebook.com/tr?id=526072887220486&ev=PageView&noscript=1"></noscript>
+</head>
+<body>
+
+<svg width="0" height="0" style="position:absolute" aria-hidden="true">
+  <symbol id="wa" viewBox="0 0 24 24"><path fill="currentColor" d="M12 2a10 10 0 0 0-8.6 15.1L2 22l5-1.3A10 10 0 1 0 12 2zm0 18.2c-1.5 0-3-.4-4.3-1.2l-.3-.2-3 .8.8-2.9-.2-.3A8.2 8.2 0 1 1 12 20.2zm4.5-6.1c-.2-.1-1.5-.7-1.7-.8s-.4-.1-.6.1-.7.8-.8 1-.3.2-.5.1a6.7 6.7 0 0 1-3.3-2.9c-.3-.4.2-.4.7-1.4.1-.2 0-.3 0-.4l-.8-1.8c-.2-.5-.4-.4-.6-.4h-.5c-.2 0-.4.1-.7.3s-.9.9-.9 2.2.9 2.5 1 2.7 1.8 2.8 4.4 3.9c1.6.7 2.3.8 3.1.6.5-.1 1.5-.6 1.7-1.2s.2-1.1.2-1.2-.3-.2-.5-.3z"/></symbol>
+</svg>
+
+<div class="top"><div class="wrap"><img src="assets/logo-mark-light.png" alt="לוגו סטודיו שאטסקי אילון"><span class="name"><b>SHATSKY EYLON</b><small aria-label="interior design studio"><i>i</i><i>n</i><i>t</i><i>e</i><i>r</i><i>i</i><i>o</i><i>r</i><i>&nbsp;</i><i>d</i><i>e</i><i>s</i><i>i</i><i>g</i><i>n</i><i>&nbsp;</i><i>s</i><i>t</i><i>u</i><i>d</i><i>i</i><i>o</i></small></span></div></div>
+
+<!-- 1. HERO -->
+<header class="hero" id="top">
+  <img class="bg" src="assets/hero-kitchen-2.jpg" alt="מטבח בהיר עם ארונות עץ, אי עם חזית מחורצת וארבעה שרפרפי עץ, בדירה שתכנן סטודיו שאטסקי אילון">
+  <div class="shade"></div>
+  <div class="wrap">
+    <div class="core-logo" role="img" aria-label="CORE by Shatsky Eylon">
+      <span class="w">CORE</span>
+      <span class="by">BY</span>
+      <span class="se" aria-hidden="true"><span>S</span><span>H</span><span>A</span><span>T</span><span>S</span><span>K</span><span>Y</span><span></span><span>E</span><span>Y</span><span>L</span><span>O</span><span>N</span></span>
+    </div>
+    <p class="q"><span>רכשתם דירת קבלן?</span><span>אתם עומדים בפני שלב שינויי הדיירים?</span></p>
+  </div>
+  <a class="cue" href="#intro" aria-label="גללו למטה"></a>
+</header>
+
+<!-- 2. INTRO -->
+<section id="intro">
+  <div class="wrap intro rv">
+    <h1>הדירה שלכם עולה מיליונים. <span class="accent">אל תגלו אחרי קבלת המפתח</span> מה הייתם צריכים לתכנן אחרת.</h1>
+    <div class="prose"><p>CORE מרכז את התכנון והבחירות החשובות לשלב שינויי הדיירים, עם עין מקצועית שמסייעת לכם לזהות צרכים, לבחון חלופות ולהימנע מטעויות מיותרות, בלי להיכנס לליווי עיצוב פנים מלא.</p></div>
+    <a class="btn wa" href="#">בדקו איך אפשר לתכנן נכון את הדירה שלכם</a>  </div>
+</section>
+
+<!-- 3. PAIN -->
+<section class="mist pain">
+  <div class="narrow">
+    <div class="head rv"><span class="eyebrow">Today's decisions</span><h2>ההחלטות שתקבלו היום יקבעו איך תרגישו בבית שלכם <span class="accent">מחר.</span></h2></div>
+    <div class="prose rv">
+      <p>רכישת דירה היא אחת ההחלטות הכלכליות המשמעותיות בחיים.</p>
+      <p>בחרתם פרויקט, קומה, כיווני אוויר ותוכנית דירה. אבל האם עצרתם לבדוק אם התוכנית שקיבלתם מהקבלן באמת מתאימה לאופן שבו אתם חיים?</p>
+      <p><strong>איפה תעמוד הספה?</strong></p>
+      <p><strong>האם המטבח יהיה נוח לבישול ולאירוח?</strong></p>
+      <p><strong>האם יש מספיק מקומות אחסון?</strong></p>
+      <p><strong>האם נקודות החשמל והתאורה נמצאות במקומות הנכונים?</strong></p>
+      <p>אלה אולי נראות כמו החלטות קטנות, אבל הן אלה שישפיעו על ההתנהלות היומיומית שלכם בבית במשך שנים.</p>
+    </div>
+  </div>
+</section>
+
+<!-- 4. TIMING -->
+<section>
+  <div class="wrap timing">
+    <img class="rv" src="assets/home-8.jpg" alt="ספריית עץ מובנית בפינת אוכל" loading="lazy">
+    <div class="rv">
+      <span class="eyebrow">Timing</span>
+      <h2>והעניין הוא שבדירת קבלן, <span class="accent">לתזמון יש משמעות.</span></h2>
+      <div class="prose">
+        <p>שינוי שאפשר היה לבחון בשלב התכנון עלול להפוך למורכב, יקר ולעיתים גם בלתי אפשרי אחרי שהעבודות כבר בוצעו.</p>
+        <p>כי את הטעויות בתכנון לא תמיד רואים על הנייר. <strong class="accent">לפעמים מגלים אותן רק כשמתחילים לחיות בבית.</strong></p>
+        <p>וזה בדיוק מה שאנחנו רוצות לעזור לכם למנוע.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- 5. BRIDGE -->
+<section class="mist bridge">
+  <div class="narrow">
+    <div class="head rv"><span class="eyebrow">A focused path</span><h2>אז איך מתכננים נכון את דירת הקבלן בלי להיכנס לתהליך עיצוב פנים ארוך ויקר?</h2></div>
+    <div class="prose rv">
+      <p>לא כל משפחה רוצה או צריכה ליווי עיצוב פנים מלא.</p>
+      <p>אבל זה לא אומר שצריך לוותר על תכנון מקצועי דווקא בשלב שבו מתקבלות החלטות משמעותיות על הבית.</p>
+      <p>מתוך הניסיון שלנו בליווי פרויקטים של עיצוב פנים ודירות קבלן, פיתחנו את CORE. מסלול תכנון ועיצוב קצר, ממוקד ונגיש יותר מליווי מלא, שמאפשר לכם לקבל הכוונה מקצועית בהחלטות החשובות של שלב שינויי הדיירים.</p>
+      <p class="quote">במקום לקבל החלטות על בסיס ניחושים, אתם מקבלים תמונה ברורה יותר של האפשרויות שלכם, של הצרכים שלכם ושל הדרך להתקדם.</p>
+    </div>
+  </div>
+  <div class="wrap">
+    <div class="trio rv">
+      <div><b>בלי</b> חודשים של תהליך עיצוב פנים.</div>
+      <div><b>בלי</b> להתחייב עכשיו לליווי מלא.</div>
+      <div class="yes"><b>ועם</b> עין מקצועית שמסתכלת על הבית שלכם כמכלול.</div>
+    </div>
+  </div>
+</section>
+
+<!-- 6. MEET CORE -->
+<section id="core">
+  <div class="wrap">
+    <div class="head rv">
+      <span class="eyebrow">Meet CORE</span>
+      <h2>תכנון חכם עכשיו. <span class="accent">בית שמתאים לכם בעתיד.</span></h2>
+      <p class="lead">מסלול ממוקד לתכנון ועיצוב דירת קבלן, המשלב שלושה מרכיבים מרכזיים:</p>
+    </div>
+    <div class="pillars">
+      <article class="pillar rv">
+        <span class="num">01</span>
+        <img src="assets/home-12.jpg" alt="סלון מואר עם ספה ושולחן קפה" loading="lazy">
+        <h3>תכנון הדירה והשינויים</h3>
+        <div class="prose">
+          <p>לפני שמחליטים מה לשנות, צריך להבין מה באמת נכון עבורכם.</p>
+          <p>נבחן את תוכנית הדירה, נלמד את הצרכים ואת אורח החיים שלכם, ונבדוק איך אפשר לנצל את החללים בצורה חכמה יותר. נכין חלופות להעמדת הריהוט והחללים, נסמן שינויים רלוונטיים ונצייד אתכם בהנחיות להמשך ההתנהלות מול מתאמת השינויים.</p>
+        </div>
+        <p class="why">כדי שתדעו מה אתם רוצים לשנות, ובעיקר למה.</p>
+      </article>
+      <article class="pillar rv">
+        <span class="num">02</span>
+        <img src="assets/home-1.jpg" alt="מטבח עם אי ושלושה כיסאות בר" loading="lazy">
+        <h3>מטבח שמתוכנן סביב החיים שלכם</h3>
+        <div class="prose">
+          <p>המטבח הוא אחד החללים הפעילים והמשמעותיים בבית.</p>
+          <p>אנחנו נתכנן אותו בהתאם להרגלי הבישול, האירוח, האחסון וההתנהלות שלכם, תוך התייחסות לקשר שלו עם שאר חללי הדירה. לאחר גיבוש התכנון נלווה אתכם לפגישה אצל חברת המטבחים של הפרויקט, שבה נבחן את התכנון והתמחור ונבחר יחד את החומרים והפרטים העיצוביים.</p>
+        </div>
+        <p class="why">כדי שהמטבח לא יהיה רק יפה על הנייר, אלא גם נוח ומתאים לחיים שלכם.</p>
+      </article>
+      <article class="pillar rv">
+        <span class="num">03</span>
+        <img src="assets/home-4.jpg" alt="ספה בהירה, שולחן עץ ושולחן צד מאבן טרוורטין" loading="lazy" style="object-position:50% 35%">
+        <h3>בחירת חומרי גמר בשפה עיצובית אחת</h3>
+        <div class="prose">
+          <p>ריצוף, חיפויים, כלים סניטריים, צבעים וחומרים: כל בחירה משפיעה על התוצאה הסופית.</p>
+          <p>במקום להגיע לאולם התצוגה ולנסות לדמיין איך הכול יתחבר, נבנה מראש כיוון עיצובי ברור. נלווה אתכם לפגישה אצל ספק הריצופים והכלים הסניטריים של הפרויקט, ונבחר יחד את החומרים המתאימים לבית שלכם.</p>
+        </div>
+        <p class="why">כדי שכל הבחירות יתחברו לשפה עיצובית הרמונית, ולא ירגישו כמו אוסף החלטות נפרדות.</p>
+      </article>
+    </div>
+  </div>
+</section>
+
+<!-- 7. DELIVERABLES -->
+<section class="mist">
+  <div class="wrap">
+    <div class="head rv"><span class="eyebrow">What you get</span><h2>מה יוצא לכם מכל התהליך?</h2></div>
+    <ul class="deliv rv">
+      <li>תוכנית העמדה משופרת עם עד שתי חלופות לתכנון החללים.</li>
+      <li>סימונים והנחיות לשינויים בתוכניות הקבלן, להמשך עבודה עצמאית מול מתאמת השינויים.</li>
+      <li>תכנון מטבח מותאם לצרכים שלכם ולחלל.</li>
+      <li>ליווי בפגישות אצל ספק המטבחים וספק הריצופים והכלים הסניטריים.</li>
+      <li>שפה עיצובית מגובשת שמחברת בין כל הבחירות בבית.</li>
+      <li>יותר בהירות וביטחון לקראת ההחלטות החשובות של שלב שינויי הדיירים.</li>
+    </ul>
+    <p class="note rv"><b>חשוב לדעת:</b> CORE הוא מסלול תכנון והכוונה ממוקד המכין להמשך עבודה עצמאית מול מתאמת השינויים, ולא סט תוכניות עבודה מפורטות לביצוע. ניתן לשדרג מסלול זה למסלול CORE+ או ליווי עיצוב פנים מלא.</p>
+  </div>
+</section>
+
+<!-- 8. PROCESS -->
+<section id="process">
+  <div class="wrap">
+    <div class="head rv"><span class="eyebrow">The process</span><h2>תהליך ממוקד. <span class="accent">בלי לוותר על מה שחשוב.</span></h2><p class="lead">כך נעבוד יחד:</p></div>
+    <ol class="steps rv">
+      <li class="step"><span class="n">1</span><h3>מכירים אתכם</h3><p>פגישת היכרות: הדירה, הצרכים ואורח החיים.</p></li>
+      <li class="step"><span class="n">2</span><h3>מתכננים את הדירה</h3><p>חלופות העמדה, שינויים וכיוון עיצובי.</p></li>
+      <li class="step"><span class="n">3</span><h3>מתכננים מטבח</h3><p>תכנון מותאם שנציג לכם לפני הפגישה אצל הספק.</p></li>
+      <li class="step"><span class="n">4</span><h3>בוחרים מטבח</h3><p>אצל ספק המטבחים: תכנון, תמחור וחומרים.</p></li>
+      <li class="step"><span class="n">5</span><h3>בוחרים חומרי גמר</h3><p>אצל ספק הריצופים והכלים הסניטריים.</p></li>
+    </ol>
+    <p class="end-line rv">בסיום התהליך תצאו עם החלטות מגובשות, תכנון והנחיות שיסייעו לכם <span class="accent">להתקדם לשלב הבא.</span></p>
+  </div>
+</section>
+
+<!-- 9. WHO -->
+<section class="mist">
+  <div class="wrap">
+    <div class="head rv"><span class="eyebrow">Is it for you</span><h2>למי CORE מתאים במיוחד?</h2></div>
+    <div class="who rv">
+      <div><h3>לרוכשי דירת קבלן לקראת שינויי דיירים</h3><p>שרוצים לבדוק את התכנון הקיים ולבחון אילו שינויים כדאי לבצע לפני שהאפשרויות מצטמצמות.</p></div>
+      <div><h3>למשפחות ולזוגות שרוצים בית שמתאים לחיים שלהם</h3><p>ולא רק לתוכנית הסטנדרטית שהקבלן מציע.</p></div>
+      <div><h3>למי שמבינים את החשיבות של עין מקצועית</h3><p>אבל לא מעוניינים כרגע להיכנס לתהליך עיצוב פנים מלא.</p></div>
+      <div><h3>למשפרי דיור ולרוכשי דירות מנוסים</h3><p>שמחפשים תהליך ממוקד שיעזור להם לקבל החלטות מקצועיות בנקודות החשובות.</p></div>
+    </div>
+    <div class="other rv">
+      <div>
+        <h3>ומתי כדאי לשקול מסלול אחר?</h3>
+        <p>אם אתם מחפשים סט תוכניות עבודה מלא, תכנון מפורט של כל חללי הבית, ליווי לאורך שלבי הביצוע או עיצוב והלבשה עד הפרט האחרון, ייתכן שמסלול ליווי מקיף יתאים לכם יותר. בשיחת ההתאמה נוכל להבין יחד מה נכון לדירה שלכם.</p>
+      </div>
+      <a class="btn wa" href="#">בואו נבדוק איזה ליווי מתאים לכם</a>
+    </div>
+  </div>
+</section>
+
+<!-- 10. PRICE -->
+<section id="price">
+  <div class="wrap">
+    <div class="head rv">
+      <span class="eyebrow">Investment</span>
+      <h2>תכנון מקצועי להחלטות החשובות. <span class="accent">בלי להתחייב לליווי מלא.</span></h2>
+      <p class="lead">CORE נבנה עבור רוכשי דירות קבלן שרוצים לקבל החלטות תכנוניות חכמות בזמן, עם הכוונה מקצועית, בלי להיכנס לתהליך עיצוב פנים מקיף.</p>
+    </div>
+    <div class="price rv">
+      <div class="ttl">ההשקעה במסלול <b>CORE</b></div>
+      <div class="amt">9,500<small>₪</small></div>
+      <p class="inc">כולל תוכניות העמדה, תכנון מטבח ו-2 פגישות ליווי אצל הספקים.</p>
+      <div class="bonus"><b>בונוס: קובץ לניהול תקציב</b><span>כלי שיעזור לכם לרכז את ההוצאות המתוכננות ולעקוב אחר התקציב לאורך הדרך.</span></div>
+      <a class="btn wa" href="#"><svg aria-hidden="true"><use href="#wa"/></svg>בדקו אם CORE מתאים לדירה שלכם</a>
+      <p class="add">ניתן להוסיף פגישות ספקים נוספות בתוספת תשלום.</p>
+    </div>
+  </div>
+</section>
+
+<!-- 11. TESTIMONIALS: real client WhatsApp messages -->
+<section class="mist" id="proof">
+  <div class="wrap">
+    <div class="head rv">
+      <span class="eyebrow">Client stories</span>
+      <h2>ומה אומרים הלקוחות שכבר עברו איתנו את הדרך?</h2>
+      <p class="lead">אין כמו לשמוע ממי שכבר התמודדו עם ההחלטות שאתם עומדים לקבל.</p>
+    </div>
+    <div class="shots">
+      <div class="shot rv"><img src="assets/review-1.webp" alt="הודעת וואטסאפ מלקוחה" loading="lazy"></div>
+      <div class="shot rv"><img src="assets/review-2.webp" alt="הודעת וואטסאפ מלקוחה" loading="lazy"></div>
+      <div class="shot rv"><img src="assets/review-3.webp" alt="הודעת וואטסאפ מלקוחה" loading="lazy"></div>
+      <div class="shot rv"><img src="assets/review-4.webp" alt="הודעת וואטסאפ מלקוחה" loading="lazy"></div>
+      <div class="shot rv"><img src="assets/review-5.webp" alt="הודעת וואטסאפ מלקוחה" loading="lazy"></div>
+      <div class="shot rv"><img src="assets/review-6.webp" alt="הודעת וואטסאפ מלקוחה" loading="lazy"></div>
+    </div>
+    <p class="swipe">החליקו לעוד המלצות ←</p>
+    <!-- TODO: add a CORE project example: original plan → proposed changes → planning result -->
+  </div>
+</section>
+
+<!-- 12. ABOUT -->
+<section>
+  <div class="wrap about">
+    <img class="rv" src="assets/home-14.jpg" alt="מרינה שאטסקי וטל אילון פרג'ון במטבח שעיצבו" loading="lazy">
+    <div class="rv">
+      <span class="eyebrow">Who we are</span>
+      <h2>נעים להכיר, אנחנו סטודיו שאטסקי אילון</h2>
+      <div class="prose">
+        <p><strong>מרינה שאטסקי וטל אילון פרג'ון.</strong> אנחנו מתמחות בעיצוב פנים ומפתחות את שיטת <strong>"הבית המקבל"</strong>, גישה המחברת בין הצרכים האישיים, ההרגלים ואורח החיים של כל משפחה לבין התכנון והעיצוב של הבית.</p>
+        <p>אנחנו מאמינות שבית מתוכנן היטב הוא הרבה מעבר לחלל יפה. הוא צריך להיות מקום שנוח לחיות בו, שמרגישים בו שייכות, שמאפשר לנוח, לארח, לגדול ולהשתנות.</p>
+        <p>מתוך העבודה שלנו עם משפחות ורוכשי דירות קבלן הבנו שלא כולם זקוקים לאותו היקף ליווי, ושלא תמיד נכון להתחייב מראש לתהליך עיצוב פנים מלא. לכן יצרנו מסלולי ליווי מודולריים שמאפשרים לקבל עזרה מקצועית בהתאם לשלב ולצורך.</p>
+        <p><strong>CORE הוא המענה הממוקד שלנו לשלב שינויי הדיירים.</strong> אותה חשיבה מקצועית, באופי תהליך שמתאים למי שצריכים עכשיו תכנון ממוקד ולא ליווי מלא.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- 13. FAQ -->
+<section class="mist" id="faq">
+  <div class="narrow">
+    <div class="head rv"><span class="eyebrow">Questions</span><h2>שאלות שכדאי לשאול לפני שמתחילים</h2></div>
+    <div class="faq rv">
+      <details open><summary>האם CORE מתאים גם אם אנחנו לא מבינים שום דבר בתכנון ועיצוב?</summary><p>בהחלט. המסלול מיועד גם לרוכשים ללא ניסיון קודם. אנחנו נעזור לכם להבין את האפשרויות, לבחון את הצרכים ולקבל החלטות מושכלות.</p></details>
+      <details><summary>האם נקבל תוכניות עבודה מלאות לקבלן?</summary><p>לא. CORE כולל תוכניות העמדה, סימונים והנחיות להמשך העבודה מול מתאמת השינויים. הכנת תוכניות עבודה מפורטות לביצוע אינה חלק מהמסלול.</p></details>
+      <details><summary>האם תגיעו איתנו לבחור מטבח וחומרי גמר?</summary><p>כן. המסלול כולל פגישה אצל ספק המטבחים של הפרויקט ופגישה אצל ספק הריצופים והכלים הסניטריים של הפרויקט, בהתאם לפירוט המסלול.</p></details>
+      <details><summary>מה אם נרצה ליווי נוסף בהמשך?</summary><p>אפשר לבחון המשך ליווי במסגרת המסלולים הנוספים של הסטודיו, בהתאם לצרכים ולשלב שבו תהיו.</p></details>
+      <details><summary>איך נדע אם CORE מספיק לנו או שכדאי לבחור בליווי מלא?</summary><p>זו בדיוק אחת המטרות של שיחת ההתאמה. נבין מה אתם צריכים ונבדוק איזה היקף שירות נכון עבורכם.</p></details>
+    </div>
+  </div>
+</section>
+
+<!-- 14. FINAL CTA: straight to WhatsApp -->
+<section class="final" id="final">
+  <img class="bg" src="assets/home-3.jpg" alt="" loading="lazy">
+  <div class="narrow">
+    <span class="eyebrow">Let's talk</span>
+    <h2>לפני שמתקדמים עם הדירה, <span class="accent">כדאי לוודא שמתקדמים נכון.</span></h2>
+    <div class="prose">
+      <p>אתם לא חייבים לדעת עכשיו את כל התשובות. אבל אתם כן יכולים לקבל את ההחלטות החשובות עם עין מקצועית, חשיבה תכנונית והכוונה שתעזור לכם להימנע מטעויות מיותרות.</p>
+      <p><strong>בואו נבדוק אם CORE הוא המסלול הנכון לדירה שלכם.</strong> כתבו לנו בוואטסאפ ונתאם שיחת התאמה, שבה נבין באיזה שלב אתם נמצאים ומה נכון לתכנן עכשיו.</p>
+    </div>
+    <a class="btn inv wa" href="#"><svg aria-hidden="true"><use href="#wa"/></svg>אני רוצה לבדוק התאמה ל-CORE</a>
+    <span class="note-s">נפתח וואטסאפ עם הודעה מוכנה. רק ללחוץ שלח.</span>
+  </div>
+</section>
+
+<footer>
+  <div class="wrap">
+    <img src="assets/logo-studio-light.png" alt="לוגו סטודיו שאטסקי אילון">
+    <p class="tag">סטודיו שאטסקי אילון | תכנון ועיצוב פנים</p>
+    <p>CORE: החלטות חכמות עכשיו. בית שמתאים לכם בהמשך.</p>
+    <nav class="social" aria-label="הרשתות והאתר שלנו">
+      <a href="https://wa.me/972545841262" target="_blank" rel="noopener" aria-label="וואטסאפ"><svg aria-hidden="true"><use href="#wa"/></svg></a>
+      <a href="https://www.shatskyeylon.com/" target="_blank" rel="noopener" aria-label="האתר שלנו"><svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="9.5" fill="none" stroke="currentColor" stroke-width="1.6"/><path d="M2.5 12h19M12 2.5c2.6 2.8 3.9 6 3.9 9.5s-1.3 6.7-3.9 9.5M12 2.5C9.4 5.3 8.1 8.5 8.1 12s1.3 6.7 3.9 9.5" fill="none" stroke="currentColor" stroke-width="1.6"/></svg></a>
+      <a href="https://www.instagram.com/shatsky_eylon_interiordesign/" target="_blank" rel="noopener" aria-label="אינסטגרם"><svg viewBox="0 0 24 24" aria-hidden="true"><rect x="3" y="3" width="18" height="18" rx="5" fill="none" stroke="currentColor" stroke-width="1.6"/><circle cx="12" cy="12" r="4.2" fill="none" stroke="currentColor" stroke-width="1.6"/><circle cx="17.3" cy="6.7" r="1.1" fill="currentColor"/></svg></a>
+      <a href="https://www.facebook.com/SHATSKY.EYLON/" target="_blank" rel="noopener" aria-label="פייסבוק"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M13.5 21v-7.5h2.6l.4-3h-3V8.6c0-.9.3-1.5 1.5-1.5h1.6V4.4c-.3 0-1.2-.1-2.3-.1-2.3 0-3.8 1.4-3.8 3.9v2.3H8v3h2.5V21z" fill="currentColor"/></svg></a>
+      <a href="https://www.pinterest.com/shatskyeylon/" target="_blank" rel="noopener" aria-label="פינטרסט"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12.2 2.5C6.9 2.5 4 6 4 9.9c0 1.8 1 4.1 2.5 4.8.2.1.4 0 .4-.2l.3-1.4c0-.1 0-.3-.1-.4-.5-.6-.9-1.7-.9-2.7 0-2.6 2-5.1 5.3-5.1 2.9 0 5 2 5 4.8 0 3.2-1.6 5.4-3.7 5.4-1.2 0-2-.9-1.7-2.1.3-1.4 1-2.9 1-3.9 0-.9-.5-1.7-1.5-1.7-1.2 0-2.2 1.2-2.2 2.9 0 1 .4 1.8.4 1.8l-1.4 6c-.4 1.7 0 4.2.1 4.4 0 .1.2.2.3.1.1-.2 1.7-2.4 2.2-4.1l.8-3.1c.4.8 1.6 1.5 2.9 1.5 3.8 0 6.5-3.5 6.5-7.8 0-4.2-3.4-7.3-7.8-7.3z" fill="currentColor"/></svg></a>
+    </nav>
+  </div>
+</footer>
+
+<div class="sticky" id="sticky"><a class="btn wa" href="#"><svg aria-hidden="true"><use href="#wa"/></svg>בדקו אם CORE מתאים לכם</a></div>
+
+<script>
+// every CTA opens WhatsApp with a ready message
+(function(){
+  var url='https://wa.me/972545841262?text='+encodeURIComponent('היי, הגעתי מעמוד CORE ואשמח לתאם שיחת התאמה');
+  document.querySelectorAll('a.wa').forEach(function(a){ a.href=url; a.target='_blank'; a.rel='noopener';
+    // a WhatsApp click is the lead on this page
+    a.addEventListener('click',function(){ if(window.fbq) fbq('track','Contact',{content_name:'CORE'}); }); });
+})();
+
+// reveal sections as they scroll in
+(function(){
+  var els=document.querySelectorAll('.rv');
+  if(!('IntersectionObserver' in window)){ els.forEach(function(e){e.classList.add('in')}); return; }
+  var io=new IntersectionObserver(function(es){ es.forEach(function(e){ if(e.isIntersecting){ e.target.classList.add('in'); io.unobserve(e.target); } }); },{rootMargin:'0px 0px -8% 0px'});
+  els.forEach(function(e){ io.observe(e); });
+})();
+
+// sticky CTA on mobile: show after the first screen, hide from the final section down
+(function(){
+  var s=document.getElementById('sticky'), hero=document.getElementById('top'), fin=document.getElementById('final');
+  if(!('IntersectionObserver' in window)) return;
+  var heroOut=false, finIn=false;
+  function upd(){ s.classList.toggle('show', heroOut && !finIn); }
+  new IntersectionObserver(function(e){ heroOut=!e[0].isIntersecting; upd(); }).observe(hero);
+  new IntersectionObserver(function(e){ finIn=e[0].isIntersecting || e[0].boundingClientRect.top<0; upd(); }).observe(fin);
+})();
+</script>
+</body>
+</html>
