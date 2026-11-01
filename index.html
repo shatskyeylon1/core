@@ -69,10 +69,11 @@ h3{font-size:21px;letter-spacing:-.2px;margin-bottom:8px}
 @media (prefers-reduced-motion:reduce){.rv{opacity:1;transform:none;transition:none}}
 
 /* buttons: square corners, black */
-.btn{display:inline-flex;justify-content:center;align-items:center;gap:10px;font-family:var(--body);font-size:15px;font-weight:500;letter-spacing:.15px;padding:16px 30px;border-radius:999px;border:1px solid var(--ink);background:var(--ink);color:var(--white);cursor:pointer;transition:background .25s,color .25s}
-.btn:hover{background:var(--pencil-deep);border-color:var(--pencil-deep);color:#fff}
+.btn{display:inline-flex;justify-content:center;align-items:center;gap:10px;font-family:var(--body);font-size:15px;font-weight:500;letter-spacing:.15px;padding:16px 30px;border-radius:12px;border:1px solid var(--ink);background:var(--ink);color:var(--white);cursor:pointer;transition:background .25s,color .25s,border-color .25s}
+/* quiet hover: the button turns white with a hairline black edge */
+.btn:hover{background:#fff;border-color:var(--ink);color:var(--ink)}
 .btn.inv{background:var(--pencil);color:var(--ink);border-color:var(--pencil)}
-.btn.inv:hover{background:#c58a71;border-color:#c58a71;color:var(--ink)}
+.btn.inv:hover{background:#fff;border-color:var(--ink);color:var(--ink)}
 .btn svg{width:18px;height:18px;flex:none}
 .btn:focus-visible,summary:focus-visible{outline:2px solid var(--pencil);outline-offset:3px}
 
