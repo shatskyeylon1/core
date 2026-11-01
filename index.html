@@ -69,12 +69,18 @@ h3{font-size:21px;letter-spacing:-.2px;margin-bottom:8px}
 @media (prefers-reduced-motion:reduce){.rv{opacity:1;transform:none;transition:none}}
 
 /* buttons: square corners, black */
-.btn{display:inline-flex;justify-content:center;align-items:center;gap:10px;font-family:var(--body);font-size:15px;font-weight:500;letter-spacing:.15px;padding:16px 30px;border-radius:12px;border:1px solid var(--ink);background:var(--ink);color:var(--white);cursor:pointer;transition:background .25s,color .25s,border-color .25s}
+.btn{display:inline-flex;justify-content:center;align-items:center;gap:10px;font-family:var(--body);font-size:15px;font-weight:500;letter-spacing:.15px;padding:16px 30px;border-radius:6px;border:1px solid var(--ink);background:var(--ink);color:var(--white);cursor:pointer;transition:background .25s,color .25s,border-color .25s}
 /* quiet hover: the button turns white with a hairline black edge */
 .btn:hover{background:#fff;border-color:var(--ink);color:var(--ink)}
 .btn.inv{background:var(--ink);color:#fff;border-color:rgba(255,255,255,.55)}
 .btn.inv:hover{background:#fff;border-color:var(--ink);color:var(--ink)}
 .btn svg{width:18px;height:18px;flex:none}
+/* black and white only: the key words carry the weight */
+.btn b{font-weight:700}
+.btn > span{text-wrap:balance}
+@media (max-width:420px){.price .btn{padding:16px 16px;font-size:14.5px;gap:8px}}
+.hero .hero-cta{border-color:rgba(255,255,255,.55)}
+.hero .hero-cta:hover{border-color:var(--ink)}
 .btn:focus-visible,summary:focus-visible{outline:2px solid var(--pencil);outline-offset:3px}
 
 /* studio header over the photo */
@@ -294,7 +300,7 @@ fbq("track","PageView");
       <span class="se" aria-hidden="true"><span>B</span><span>Y</span><span></span><span>S</span><span>H</span><span>A</span><span>T</span><span>S</span><span>K</span><span>Y</span><span></span><span>E</span><span>Y</span><span>L</span><span>O</span><span>N</span></span>
     </div>
     <p class="q"><span>רכשתם דירת קבלן?</span><span>אתם עומדים בפני שלב שינויי הדיירים?</span></p>
-    <a class="btn wa hero-cta" href="#">בואו נבדוק מה נכון לדירה שלכם</a>
+    <a class="btn wa hero-cta" href="#"><span>בואו נבדוק מה נכון <b>לדירה שלכם</b></span></a>
   </div>
   <a class="cue" href="#intro" aria-label="גללו למטה"></a>
 </header>
@@ -448,7 +454,7 @@ fbq("track","PageView");
         <h3>ומתי כדאי לשקול מסלול אחר?</h3>
         <p>אם אתם מחפשים סט תוכניות עבודה מלא, תכנון מפורט של כל חללי הבית, ליווי לאורך שלבי הביצוע או עיצוב והלבשה עד הפרט האחרון, ייתכן שמסלול ליווי מקיף יתאים לכם יותר. בשיחת ההתאמה נוכל להבין יחד מה נכון לדירה שלכם.</p>
       </div>
-      <a class="btn wa" href="#">בואו נבדוק איזה ליווי מתאים לכם</a>
+      <a class="btn wa" href="#"><span>בואו נבדוק איזה ליווי <b>מתאים לכם</b></span></a>
     </div>
   </div>
 </section>
@@ -466,7 +472,7 @@ fbq("track","PageView");
       <div class="amt">9,500<small>₪</small></div>
       <p class="inc">כולל תוכניות העמדה, תכנון מטבח ו-2 פגישות ליווי אצל הספקים.</p>
       <div class="bonus"><b>בונוס: קובץ לניהול תקציב</b><span>כלי שיעזור לכם לרכז את ההוצאות המתוכננות ולעקוב אחר התקציב לאורך הדרך.</span></div>
-      <a class="btn wa" href="#"><svg aria-hidden="true"><use href="#wa"/></svg>בדקו אם CORE מתאים לדירה שלכם</a>
+      <a class="btn wa" href="#"><svg aria-hidden="true"><use href="#wa"/></svg><span>בדקו אם CORE מתאים <b>לדירה שלכם</b></span></a>
       <p class="add">ניתן להוסיף פגישות ספקים נוספות בתוספת תשלום.</p>
     </div>
   </div>
@@ -534,7 +540,7 @@ fbq("track","PageView");
       <p>אתם לא חייבים לדעת עכשיו את כל התשובות. אבל אתם כן יכולים לקבל את ההחלטות החשובות עם עין מקצועית, חשיבה תכנונית והכוונה שתעזור לכם להימנע מטעויות מיותרות.</p>
       <p><strong>בואו נבדוק אם CORE הוא המסלול הנכון לדירה שלכם.</strong> כתבו לנו בוואטסאפ ונתאם שיחת התאמה, שבה נבין באיזה שלב אתם נמצאים ומה נכון לתכנן עכשיו.</p>
     </div>
-    <a class="btn inv wa" href="#"><svg aria-hidden="true"><use href="#wa"/></svg>אני רוצה לבדוק התאמה ל-CORE</a>
+    <a class="btn inv wa" href="#"><svg aria-hidden="true"><use href="#wa"/></svg><span>אני רוצה לבדוק <b>התאמה ל-CORE</b></span></a>
     <span class="note-s">נפתח וואטסאפ עם הודעה מוכנה. רק ללחוץ שלח.</span>
   </div>
 </section>
@@ -554,7 +560,7 @@ fbq("track","PageView");
   </div>
 </footer>
 
-<div class="sticky" id="sticky"><a class="btn wa" href="#"><svg aria-hidden="true"><use href="#wa"/></svg>בדקו אם CORE מתאים לכם</a></div>
+<div class="sticky" id="sticky"><a class="btn wa" href="#"><svg aria-hidden="true"><use href="#wa"/></svg><span>בדקו אם CORE <b>מתאים לכם</b></span></a></div>
 
 <script>
 // every CTA opens WhatsApp with a ready message
