@@ -94,10 +94,11 @@ h3{font-size:21px;letter-spacing:-.2px;margin-bottom:8px}
 .hero .core-logo{text-shadow:0 1px 3px rgba(0,0,0,.3),0 2px 26px rgba(0,0,0,.35)}
 .hero .wrap{position:relative}
 .core-logo{display:inline-flex;flex-direction:column;align-items:center;direction:ltr;line-height:1}
-.core-logo .w{font-family:var(--label);font-weight:700;font-size:clamp(80px,10vw,140px);line-height:.9}
+/* the CORE wordmark is the studio artwork itself, cropped tight to the letters */
+.core-logo .w{display:block;width:clamp(240px,27vw,400px);height:auto;filter:drop-shadow(0 2px 18px rgba(0,0,0,.28))}
 .core-logo .by{font-family:var(--label);font-size:clamp(15px,1.5vw,20px);letter-spacing:.1em;margin-top:clamp(12px,1.3vw,18px)}
 /* the byline spans the visible letters of CORE, inset by the side bearings of C and E */
-.core-logo .se{align-self:stretch;margin-left:1.3%;margin-right:2.4%;display:flex;justify-content:space-between;font-family:var(--label);font-weight:400;font-size:clamp(12px,1.25vw,17px);margin-top:clamp(14px,1.5vw,20px)}
+.core-logo .se{align-self:stretch;margin-inline:.5%;display:flex;justify-content:space-between;font-family:var(--label);font-weight:400;font-size:clamp(12px,1.25vw,17px);margin-top:clamp(14px,1.5vw,20px)}
 .hero .q{margin-top:clamp(28px,3.6vw,48px);font-size:clamp(17px,1.7vw,21px);font-weight:300;color:rgba(255,255,255,.9)}
 .hero .q span{display:block}
 /* the opening question: two bold lines at one size, readable on the photo */
@@ -288,7 +289,7 @@ fbq("track","PageView");
   <div class="shade"></div>
   <div class="wrap">
     <div class="core-logo" role="img" aria-label="CORE by Shatsky Eylon">
-      <span class="w">CORE</span>
+      <img class="w" src="assets/core-logo-white.png" alt="" width="701" height="202">
       <span class="se" aria-hidden="true"><span>B</span><span>Y</span><span></span><span>S</span><span>H</span><span>A</span><span>T</span><span>S</span><span>K</span><span>Y</span><span></span><span>E</span><span>Y</span><span>L</span><span>O</span><span>N</span></span>
     </div>
     <p class="q"><span>רכשתם דירת קבלן?</span><span>אתם עומדים בפני שלב שינויי הדיירים?</span></p>
