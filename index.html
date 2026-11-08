@@ -160,15 +160,13 @@ h3{font-size:21px;letter-spacing:-.2px;margin-bottom:8px}
 .note b{font-weight:600}
 
 /* process: a short horizontal path of five numbered stops */
-.steps{list-style:none;display:grid;grid-template-columns:repeat(5,1fr);gap:20px;position:relative}
-.steps::before{content:"";position:absolute;top:26px;inset-inline:10%;border-top:1px dashed var(--line-2)}
-.step{text-align:center;position:relative}
-.step .n{width:52px;height:52px;margin:0 auto 18px;border-radius:50%;border:1px solid var(--pencil);background:var(--white);display:flex;align-items:center;justify-content:center;font-family:var(--label);font-size:15px;color:var(--pencil-deep);position:relative}
-.step + .step .n::after{content:"←";position:absolute;inset-inline-end:calc(100% + 6px);top:50%;transform:translateY(-55%);font-size:14px;color:var(--pencil);background:var(--white);padding:0 4px}
-.step h3{font-size:19px;margin-bottom:6px}
-.step p{font-size:var(--fs-small);font-weight:300;color:var(--muted);max-width:200px;margin:0 auto}
-.step p + p{margin-top:8px}
-.step p b{font-weight:500;color:var(--ink)}
+.steps{list-style:none;display:grid;max-width:760px;margin:0 auto;position:relative}
+.steps::before{content:"";position:absolute;top:26px;bottom:26px;inset-inline-start:25.5px;border-inline-start:1px dashed var(--line-2)}
+.step{display:grid;grid-template-columns:52px 1fr;gap:0 24px;text-align:start;position:relative;padding-bottom:34px}
+.step:last-child{padding-bottom:0}
+.step .n{grid-row:span 2;width:52px;height:52px;margin:0;border-radius:50%;border:1px solid var(--pencil);background:var(--white);display:flex;align-items:center;justify-content:center;font-family:var(--label);font-size:15px;color:var(--pencil-deep);position:relative}
+.step h3{font-size:19px;margin:12px 0 6px}
+.step p{grid-column:2;font-size:var(--fs-small);font-weight:300;color:var(--muted)}
 .end-line{text-align:center;font-size:clamp(19px,1.9vw,22px);font-weight:500;max-width:640px;margin:var(--s-block) auto 0}
 
 /* who: a 2x2 grid of cells */
@@ -246,14 +244,10 @@ footer .tag{color:#cfcdc8;font-size:15px;margin-bottom:4px}
   .top .name b{letter-spacing:.32em;margin-right:-.32em}
   .top .name small{font-size:8.5px}
   /* phone: the same path, top to bottom */
-  .steps{grid-template-columns:1fr;gap:0;max-width:420px;margin:0 auto}
-  .steps::before{top:22px;bottom:22px;inset-inline:auto;inset-inline-start:21.5px;border-top:0;border-inline-start:1px dashed var(--line-2)}
-  .step{display:grid;grid-template-columns:44px 1fr;gap:0 16px;text-align:start;padding-bottom:22px}
-  .step:last-child{padding-bottom:0}
-  .step .n{grid-row:span 2;width:44px;height:44px;margin:0;font-size:14px}
-  .step + .step .n::after{display:none}
-  .step h3{margin:8px 0 2px}
-  .step p{margin:0;max-width:none;grid-column:2}
+  .steps::before{top:22px;bottom:22px;inset-inline-start:21.5px}
+  .step{grid-template-columns:44px 1fr;gap:0 16px;padding-bottom:24px}
+  .step .n{width:44px;height:44px;font-size:14px}
+  .step h3{margin:8px 0 4px}
   .intro h1{font-size:clamp(29px,8vw,38px)}
   .intro .btn,.final .btn{width:100%}
   .timing,.about{grid-template-columns:1fr;gap:36px}
@@ -439,11 +433,11 @@ fbq("track","PageView");
   <div class="wrap">
     <div class="head rv"><span class="eyebrow">The process</span><h2>תהליך ממוקד. <span class="accent">בלי לוותר על מה שחשוב.</span></h2><p class="lead">כך נעבוד יחד:</p></div>
     <ol class="steps rv">
-      <li class="step"><span class="n">1</span><h3>מכירים אתכם</h3><p>פגישת היכרות: הדירה, הצרכים ואורח החיים.</p></li>
-      <li class="step"><span class="n">2</span><h3>מתכננים את הדירה</h3><p><b>פגישה</b> להצגת חלופות ההעמדה, סימונים ידניים של השינויים על גבי התוכניות, דגשים לעבודה מול הקבלן והכנה לעבודה עצמאית מול שינויי הדיירים.</p></li>
-      <li class="step"><span class="n">3</span><h3>מתכננים מטבח</h3><p>תכנון מותאם שנציג לכם לפני הפגישה אצל הספק.</p></li>
-      <li class="step"><span class="n">4</span><h3>בוחרים מטבח</h3><p><b>פגישה אצל ספק המטבחים:</b> תכנון, תמחור וחומרים.</p></li>
-      <li class="step"><span class="n">5</span><h3>בוחרים חומרי גמר</h3><p><b>פגישה אצל ספק</b> הריצופים והכלים הסניטריים.</p></li>
+      <li class="step"><span class="n">1</span><h3>מכירים אתכם</h3><p>פגישת היכרות פרונטלית. נבין את הצרכים ואורח החיים שלכם, נעשה סדר במחשבות ונתמקד בשינויים שבאמת משמעותיים לבית. נשתף מניסיוננו טיפים, המלצות על חומרים ופתרונות לניצול נכון של החללים, כדי שתוכלו לקבל החלטות נכונות בכל שלב.</p></li>
+      <li class="step"><span class="n">2</span><h3>מתכננים את הדירה</h3><p>פגישה להצגת חלופות ההעמדה, סימונים ידניים של השינויים על גבי התוכניות, דגשים לעבודה מול הקבלן והכנה לעבודה עצמאית מול שינויי הדיירים.</p></li>
+      <li class="step"><span class="n">3</span><h3>מתכננים מטבח</h3><p>אחרי שנלמד את הצרכים והחומרים שלכם, נתכנן מטבח מפורט שישמש בסיס לעבודה מול חברת המטבחים. נתכנן אותו מתוך הסתכלות על הדירה כולה, ונשלח לכם אותו לאישור לפני הפגישה אצל הספק.</p></li>
+      <li class="step"><span class="n">4</span><h3>בוחרים מטבח</h3><p>פגישה אצל ספק המטבחים של הפרויקט. נתמחר את המטבח לפי התכנון שהכנו, ונבחר יחד חזיתות, משטח עבודה, צבעים וידיות.</p></li>
+      <li class="step"><span class="n">5</span><h3>בוחרים חומרי גמר</h3><p>פגישה אצל ספק הריצופים והכלים הסניטריים של הפרויקט. נבחר יחד את כל החומרים לבית בהתאם לשפה שגיבשנו. ריצוף לדירה ולמרפסת, חיפויים וריצופים לחדרי הרחצה, כלים סניטריים ואביזרים, וגם ברז וכיור למטבח.</p></li>
     </ol>
     <p class="end-line rv">בסיום התהליך תצאו עם החלטות מגובשות, תכנון והנחיות שיסייעו לכם <span class="accent">להתקדם לשלב הבא.</span></p>
   </div>
