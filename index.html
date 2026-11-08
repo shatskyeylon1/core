@@ -60,6 +60,8 @@ h3{font-size:21px;letter-spacing:-.2px;margin-bottom:8px}
 .head .lead{margin-top:var(--s-head)}
 .lead{font-size:var(--fs-text);font-weight:300;color:var(--muted)}
 .prose > * + *{margin-top:var(--s-para)}
+/* paragraphs run on with the same spacing as lines, no empty line between them */
+.prose > p + p{margin-top:0}
 .prose{font-weight:300}
 .prose strong{font-weight:600;color:var(--ink)}
 .soft{color:var(--muted)}
