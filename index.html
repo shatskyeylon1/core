@@ -167,6 +167,8 @@ h3{font-size:21px;letter-spacing:-.2px;margin-bottom:8px}
 .step + .step .n::after{content:"←";position:absolute;inset-inline-end:calc(100% + 6px);top:50%;transform:translateY(-55%);font-size:14px;color:var(--pencil);background:var(--white);padding:0 4px}
 .step h3{font-size:19px;margin-bottom:6px}
 .step p{font-size:var(--fs-small);font-weight:300;color:var(--muted);max-width:200px;margin:0 auto}
+.step p + p{margin-top:8px}
+.step p b{font-weight:500;color:var(--ink)}
 .end-line{text-align:center;font-size:clamp(19px,1.9vw,22px);font-weight:500;max-width:640px;margin:var(--s-block) auto 0}
 
 /* who: a 2x2 grid of cells */
@@ -251,7 +253,7 @@ footer .tag{color:#cfcdc8;font-size:15px;margin-bottom:4px}
   .step .n{grid-row:span 2;width:44px;height:44px;margin:0;font-size:14px}
   .step + .step .n::after{display:none}
   .step h3{margin:8px 0 2px}
-  .step p{margin:0;max-width:none}
+  .step p{margin:0;max-width:none;grid-column:2}
   .intro h1{font-size:clamp(29px,8vw,38px)}
   .intro .btn,.final .btn{width:100%}
   .timing,.about{grid-template-columns:1fr;gap:36px}
@@ -422,7 +424,7 @@ fbq("track","PageView");
     <div class="head rv"><span class="eyebrow">What you get</span><h2>מה יוצא לכם מכל התהליך?</h2></div>
     <ul class="deliv rv">
       <li>תוכנית העמדה משופרת עם עד שתי חלופות לתכנון החללים.</li>
-      <li>סימונים והנחיות לשינויים בתוכניות הקבלן, להמשך עבודה עצמאית מול מתאמת השינויים.</li>
+      <li>סימונים ידניים של השינויים על גבי תוכניות הקבלן (חשמל, תאורה, אינסטלציה, ספרינקלרים ומיזוג) והנחיות להמשך עבודה עצמאית מול מתאמת השינויים.</li>
       <li>תכנון מטבח מותאם לצרכים שלכם ולחלל.</li>
       <li>ליווי בפגישות אצל ספק המטבחים וספק הריצופים והכלים הסניטריים.</li>
       <li>שפה עיצובית מגובשת שמחברת בין כל הבחירות בבית.</li>
@@ -438,10 +440,10 @@ fbq("track","PageView");
     <div class="head rv"><span class="eyebrow">The process</span><h2>תהליך ממוקד. <span class="accent">בלי לוותר על מה שחשוב.</span></h2><p class="lead">כך נעבוד יחד:</p></div>
     <ol class="steps rv">
       <li class="step"><span class="n">1</span><h3>מכירים אתכם</h3><p>פגישת היכרות: הדירה, הצרכים ואורח החיים.</p></li>
-      <li class="step"><span class="n">2</span><h3>מתכננים את הדירה</h3><p>חלופות העמדה, שינויים וכיוון עיצובי.</p></li>
+      <li class="step"><span class="n">2</span><h3>מתכננים את הדירה</h3><p><b>פגישה פרונטלית</b> להצגת חלופות ההעמדה, השינויים והכיוון העיצובי, והכנה לעבודה עצמאית מול שינויי הדיירים.</p><p>סימונים ידניים של השינויים על גבי התוכניות: חשמל, תאורה, אינסטלציה, ספרינקלרים ומיזוג. דגשים לעבודה מול הקבלן וטיפים פרקטיים להתנהלות בשטח.</p></li>
       <li class="step"><span class="n">3</span><h3>מתכננים מטבח</h3><p>תכנון מותאם שנציג לכם לפני הפגישה אצל הספק.</p></li>
-      <li class="step"><span class="n">4</span><h3>בוחרים מטבח</h3><p>אצל ספק המטבחים: תכנון, תמחור וחומרים.</p></li>
-      <li class="step"><span class="n">5</span><h3>בוחרים חומרי גמר</h3><p>אצל ספק הריצופים והכלים הסניטריים.</p></li>
+      <li class="step"><span class="n">4</span><h3>בוחרים מטבח</h3><p><b>פגישה אצל ספק המטבחים:</b> תכנון, תמחור וחומרים.</p></li>
+      <li class="step"><span class="n">5</span><h3>בוחרים חומרי גמר</h3><p><b>פגישה אצל ספק</b> הריצופים והכלים הסניטריים.</p></li>
     </ol>
     <p class="end-line rv">בסיום התהליך תצאו עם החלטות מגובשות, תכנון והנחיות שיסייעו לכם <span class="accent">להתקדם לשלב הבא.</span></p>
   </div>
