@@ -160,13 +160,13 @@ h3{font-size:21px;letter-spacing:-.2px;margin-bottom:8px}
 .note b{font-weight:600}
 
 /* process: a short horizontal path of five numbered stops */
-.steps{list-style:none;display:grid;max-width:760px;margin:0 auto;position:relative}
-.steps::before{content:"";position:absolute;top:26px;bottom:26px;inset-inline-start:25.5px;border-inline-start:1px dashed var(--line-2)}
-.step{display:grid;grid-template-columns:52px 1fr;gap:0 24px;text-align:start;position:relative;padding-bottom:34px}
-.step:last-child{padding-bottom:0}
-.step .n{grid-row:span 2;width:52px;height:52px;margin:0;border-radius:50%;border:1px solid var(--pencil);background:var(--white);display:flex;align-items:center;justify-content:center;font-family:var(--label);font-size:15px;color:var(--pencil-deep);position:relative}
-.step h3{font-size:19px;margin:12px 0 6px}
-.step p{grid-column:2;font-size:var(--fs-small);font-weight:300;color:var(--muted)}
+.steps{list-style:none;display:grid;grid-template-columns:repeat(5,1fr);gap:24px;position:relative}
+.steps::before{content:"";position:absolute;top:26px;inset-inline:10%;border-top:1px dashed var(--line-2)}
+.step{text-align:center;position:relative}
+.step .n{width:52px;height:52px;margin:0 auto 18px;border-radius:50%;border:1px solid var(--pencil);background:var(--white);display:flex;align-items:center;justify-content:center;font-family:var(--label);font-size:15px;color:var(--pencil-deep);position:relative}
+.step + .step .n::after{content:"←";position:absolute;inset-inline-end:calc(100% + 6px);top:50%;transform:translateY(-55%);font-size:14px;color:var(--pencil);background:var(--white);padding:0 4px}
+.step h3{font-size:19px;margin-bottom:6px}
+.step p{font-size:var(--fs-small);font-weight:300;color:var(--muted)}
 .end-line{text-align:center;font-size:clamp(19px,1.9vw,22px);font-weight:500;max-width:640px;margin:var(--s-block) auto 0}
 
 /* who: a 2x2 grid of cells */
@@ -244,10 +244,14 @@ footer .tag{color:#cfcdc8;font-size:15px;margin-bottom:4px}
   .top .name b{letter-spacing:.32em;margin-right:-.32em}
   .top .name small{font-size:8.5px}
   /* phone: the same path, top to bottom */
-  .steps::before{top:22px;bottom:22px;inset-inline-start:21.5px}
-  .step{grid-template-columns:44px 1fr;gap:0 16px;padding-bottom:24px}
-  .step .n{width:44px;height:44px;font-size:14px}
+  .steps{grid-template-columns:1fr;gap:0;max-width:420px;margin:0 auto}
+  .steps::before{top:22px;bottom:22px;inset-inline:auto;inset-inline-start:21.5px;border-top:0;border-inline-start:1px dashed var(--line-2)}
+  .step{display:grid;grid-template-columns:44px 1fr;gap:0 16px;text-align:start;padding-bottom:24px}
+  .step:last-child{padding-bottom:0}
+  .step .n{grid-row:span 2;width:44px;height:44px;margin:0;font-size:14px}
+  .step + .step .n::after{display:none}
   .step h3{margin:8px 0 4px}
+  .step p{grid-column:2}
   .intro h1{font-size:clamp(29px,8vw,38px)}
   .intro .btn,.final .btn{width:100%}
   .timing,.about{grid-template-columns:1fr;gap:36px}
